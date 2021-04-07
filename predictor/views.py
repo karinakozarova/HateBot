@@ -10,6 +10,7 @@ class call_model(APIView):
         if request.method == 'GET':
             # get sound from request
             tweet = request.GET.get('tweet')
+            print("Tweet is ", tweet)
             vectorizeTweet = PredictorConfig.vectorizer.transform([tweet])
             
             prediction = PredictorConfig.regressor.predict(vectorizeTweet)[0]
