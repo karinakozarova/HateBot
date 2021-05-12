@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
       body {
-        background-image: url('http://pngimg.com/uploads/robot/robot_PNG78.png');
-        background-repeat: no-repeat;
+        background-image: url('https://i.ibb.co/pyWMmmS/wordcloud.png');
+        background-repeat: all;
+        background-size: 50%
       }
 
       .alert {
@@ -28,9 +29,6 @@
   </head>
 
   <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-      <h5 class="my-0 mr-md-auto font-weight-normal">HateBot</h5>
-    </div>
       {% if is_processed %}
         {% if is_hate %}
         <div class="alert alert-danger center-block" role="alert">
@@ -42,32 +40,35 @@
         </div>
         {% endif %}
       {% endif %} 
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">HateBot </h1>
-      <p class="lead">Paste the Tweet here</p>
-    </div>
-
-    <div class="container">
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-          <div class="card-body">
-            <form  method="POST">
-      			  <div class="form-group">
-      			    <textarea class="form-control" id="tweet" name="tweet" rows="3"></textarea>
-      			  </div>
-              <button type="submit" class="btn btn-lg btn-block btn-outline-primary">Submit the Tweet</button>
-      			</form>
-          </div>
-        </div>
+    <div style="background-color: white;margin: auto;margin-top: 10%;border-radius: 25px; padding-left:40px;padding-right:40px;
+  width: 50%;">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">HateBot 🤖 </h1>
+        <p class="lead">Paste the Tweet that you want to check for hate speech here</p>
       </div>
 
-      <footer class="pt-4 my-md-5 pt-md-5">
-        <div class="row">
-          <div class="col-12 col-md">
-            <small class="d-block mb-3" style="text-align: right">&copy; Karina Kozarova, Developed in 2021 as part of <span style="color: purple">Fontys UAS AI Specialization</span></small>
+      <div class="container">
+        <div class="card-deck mb-3 text-center">
+          <div class="card mb-4 box-shadow">
+            <div class="card-body">
+              <form  method="POST">
+        			  <div class="form-group">
+        			    <textarea class="form-control" id="tweet" name="tweet" rows="5"></textarea>
+        			  </div>
+                <button type="submit" class="btn btn-lg btn-block btn-outline-primary">Submit the Tweet</button>
+        			</form>
+            </div>
           </div>
         </div>
-      </footer>
+
+        <footer>
+          <div class="row">
+            <div class="col-12 col-md">
+              <small class="d-block mb-3" style="text-align: right"><br> &copy; Karina Kozarova, Developed in 2021 as part of <span style="color: purple">Fontys UAS AI Specialization</span></small>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <!-- Bootstrap core JavaScript
